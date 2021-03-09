@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Current Background Color is
+        <span id="name"></span>
+
+    </h1>
+    <input type="color" name="color" id="color" onchange="background_func(this.value);">  
+
+</body>
+
+<script>
+    if (typeof(Storage) !== "undefined") {
+        function background_func(background){
+        localStorage.setItem("bg", background);
+
+        document.getElementById("name").innerHTML = localStorage.getItem("bg");
+        document.body.style.backgroundColor = localStorage.getItem("bg");
+    } 
+    document.body.style.backgroundColor = localStorage.getItem("bg");
+    document.getElementById("name").innerHTML = localStorage.getItem("bg");
+    } else {
+      document.getElementById("name").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+
+    const random_hex_color_code = () => {
+  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  document.getElementById("name").innerHTML = '#'+n.slice(0, 6);
+  document.body.style.backgroundColor = '#'+n.slice(0, 6);
+//   return '#' + n.slice(0, 6);
+  location.reload()
+};
+
+// setInterval(random_hex_color_code(), 10000);
+console.log(random_hex_color_code())
+    </script>
+
+</html>

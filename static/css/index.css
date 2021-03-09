@@ -1,0 +1,55 @@
+body,
+.nav-wrapper {
+    background-color: #3c4042;
+    color: white;
+}
+
+.nav-wrapper a {
+    font-family: 'Oi', cursive;
+    color: #ddfa23
+}
+
+input {
+    width: 90%;
+    color: white;
+}
+
+.main {
+    height: 90vh;
+    background-image: url('../img//bg.jpg');
+    background-size: cover;
+    background-color: greenyellow;
+    background-blend-mode: darken;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+.card-image img {
+    transition: 0.3s;
+}
+
+.card-image img:hover {
+    scale: 1.2;
+}
+
+#row-body::-webkit-scrollbar {
+    display: none;
+}
+
+#row-body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 90%;
+    overflow-y: auto;
+}
+
+#loading {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+}
+
+#loading.display {
+    visibility: visible;
+}

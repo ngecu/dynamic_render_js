@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result" style="height: 400px;"></div>
+
+    <script>
+
+
+ setInterval(function(){
+ var hex = Math.floor( Math.random() * 0xFFFFFF );
+var res = document.getElementById('result');
+var result = "#" + hex.toString(16);
+
+document.body.style.backgroundColor = result;
+res.innerHTML = result;
+ }, 3000);
+    </script>
+</body>
+</html>
