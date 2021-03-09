@@ -24,13 +24,6 @@ input {
     padding: 2%;
 }
 
-.card-image img {
-    transition: 0.3s;
-}
-
-.card-image img:hover {
-    scale: 1.2;
-}
 
 #row-body::-webkit-scrollbar {
     display: none;
@@ -43,13 +36,11 @@ input {
     overflow-y: auto;
 }
 
-#loading {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    visibility: hidden;
+
+.card-image img {
+    transition: 0.3s;
 }
 
-#loading.display {
-    visibility: visible;
+.card-image img:hover {
+    scale: 1.2;
 }
